@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Partner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin: 15px 0;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #555;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Coding Partner</h1>
+    </header>
+    <div class="container">
+        <form id="coding-form">
+            <!-- First Page Questions -->
+            <div class="question">
+                <label for="name">What is your name?</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="question">
+                <label for="age">Your age?</label>
+                <input type="number" id="age" name="age">
+            </div>
+            <div class="question">
+                <label for="status">Your status?</label>
+                <select id="status" name="status">
+                    <option value="single">Single as fuck</option>
+                    <option value="partner">Have a partner</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="height">What is your height?</label>
+                <input type="text" id="height" name="height">
+            </div>
+            <div class="question">
+                <label for="love-language">What is your love language?</label>
+                <input type="text" id="love-language" name="love-language">
+            </div>
+
+            <!-- Second Page Questions -->
+            <div class="question">
+                <label for="learning-language">What is your love language LOL, the language you learn right now?</label>
+                <input type="text" id="learning-language" name="learning-language">
+            </div>
+            <div class="question">
+                <label for="motivation">What motivates you?</label>
+                <input type="text" id="motivation" name="motivation">
+            </div>
+            <div class="question">
+                <label for="coding-partner">Do you do coding with your partner?</label>
+                <input type="text" id="coding-partner" name="coding-partner">
+            </div>
+            <div class="question">
+                <label for="who-smarter">Who is smarter?</label>
+                <select id="who-smarter" name="who-smarter">
+                    <option value="partner">Your partner</option>
+                    <option value="you">Of course, your partner</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="future">What do you think you would be in 5 years?</label>
+                <input type="text" id="future" name="future">
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('coding-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'THANKS%20LOL.html';
+        });
+    </script>
+</body>
+</html>
