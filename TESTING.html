@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -56,9 +56,9 @@
             cursor: pointer;
         }
 
-        button:hover {
-            background-color: #555;
-        }
+            button:hover {
+                background-color: #555;
+            }
     </style>
 </head>
 <body>
@@ -66,8 +66,7 @@
         <h1>Coding Partner</h1>
     </header>
     <div class="container">
-        <!-- Updated form with action and method attributes -->
-        <form id="coding-form" action="submit.php" method="POST">
+        <form id="coding-form">
             <!-- First Page Questions -->
             <div class="question">
                 <label for="name">What is your name?</label>
@@ -121,5 +120,12 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+
+    <script>
+        document.getElementById('coding-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'THANKS%20LOL.html';
+        });
+    </script>
 </body>
 </html>
