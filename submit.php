@@ -1,23 +1,23 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars($_POST['name']);
-    $age = htmlspecialchars($_POST['age']);
-    $status = htmlspecialchars($_POST['status']);
-    $height = htmlspecialchars($_POST['height']);
-    $loveLanguage = htmlspecialchars($_POST['love-language']);
-    $learningLanguage = htmlspecialchars($_POST['learning-language']);
-    $motivation = htmlspecialchars($_POST['motivation']);
-    $codingPartner = htmlspecialchars($_POST['coding-partner']);
-    $whoSmarter = htmlspecialchars($_POST['who-smarter']);
-    $future = htmlspecialchars($_POST['future']);
+// Get form data
+$name = $_POST['name'];
+$age = $_POST['age'];
+$status = $_POST['status'];
+$height = $_POST['height'];
+$love_language = $_POST['love-language'];
+$learning_language = $_POST['learning-language'];
+$motivation = $_POST['motivation'];
+$coding_partner = $_POST['coding-partner'];
+$who_smarter = $_POST['who-smarter'];
+$future = $_POST['future'];
 
-    // Save the data to a file
-    $file = fopen("data.txt", "a");
-    fwrite($file, "Name: $name\nAge: $age\nStatus: $status\nHeight: $height\nLove Language: $loveLanguage\nLearning Language: $learningLanguage\nMotivation: $motivation\nCoding Partner: $codingPartner\nWho Smarter: $whoSmarter\nFuture: $future\n\n");
-    fclose($file);
+// Format the data
+$data = "Name: $name\nAge: $age\nStatus: $status\nHeight: $height\nLove Language: $love_language\nLearning Language: $learning_language\nMotivation: $motivation\nCoding Partner: $coding_partner\nWho is Smarter: $who_smarter\nFuture: $future\n\n";
 
-    // Redirect to THANKS LOL.html
-    header("Location: THANKS LOL.html");
-    exit();
-}
+// Save the data to a file
+file_put_contents('submissions.txt', $data, FILE_APPEND);
+
+// Redirect to the "Thank You" page
+header('Location: THANKS LOL.html');
+exit();
 ?>
